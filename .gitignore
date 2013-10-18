@@ -1,0 +1,10 @@
+# Composer WordPress
+vendor/
+wordpress/
+composer.lock
+
+# PHP Server
+mailoutput
+
+# Params
+app/config/parameters.yml
