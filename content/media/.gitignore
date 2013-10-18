@@ -1,0 +1,8 @@
+# Ignore everything but gitignore and index.php ?
+# Media files can be added in version control if 
+# sorting images by date is disable in WordPress Setting
+*
+!.gitignore
+
+# Prevent directory listing
+!index.php
