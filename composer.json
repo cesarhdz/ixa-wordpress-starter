@@ -1,0 +1,15 @@
+{
+    "name": "ixa/wordpress-starter",
+    "description": "WordPress theme startup that works with Composer",
+    "type" : "project",
+    "require": {
+        "ixa/wordpress-core": "3.6.1"
+    },
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "cesarhdz",
+            "email": "mrshortcuts@gmail.com"
+        }
+    ]
+}
