@@ -6,5 +6,10 @@ composer.lock
 # PHP Server
 mailoutput
 
-# Params
+# WordPress App
+
+## Configuration
 app/config/parameters.yml
+
+## Plugin location
+app/plugins/

@@ -2,9 +2,16 @@
     "name": "ixa/wordpress-starter",
     "description": "WordPress theme startup that works with Composer",
     "type" : "project",
+    "repositories" : [
+        {
+            "type":"composer",
+            "url":"http://wpackagist.org"
+        }
+    ],
     "require": {
         "ixa/wordpress-core": "~3.6.1",
-        "incenteev/composer-parameter-handler": "~2.0"
+        "incenteev/composer-parameter-handler": "~2.0",
+        "wpackagist/wp-markdown": "*"
     },
     "license": "GPL-2.0+",
     "authors": [
@@ -24,6 +31,9 @@
      "extra": {
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
+        },
+        "installer-paths": {
+            "app/plugins/{$name}/": ["type:wordpress-plugin"]
         }
     }
 }
