@@ -1,0 +1,6 @@
+# Ignore everything but gitignore and index.php
+*
+!.gitignore
+
+# Prevent directory listing
+!index.php
