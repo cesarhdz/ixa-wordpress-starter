@@ -1,6 +1,6 @@
 {
     "name": "ixa/wordpress-starter",
-    "description": "WordPress theme startup that works with Composer",
+    "description": "WordPress starter project that works with Composer",
     "type" : "project",
     "repositories" : [
         {
