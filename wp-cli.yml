@@ -1,0 +1,31 @@
+# Archivo de configuracion de wp-cli
+# Path determinado en composer.json
+path: wordpress
+
+disabled_commands:
+  # Plugins & themes should be installed via composer
+  # 	composer require wp-plugin
+  - theme install
+  - theme uninstall
+  - theme update
+  - theme update-all
+
+  - plugin install
+  - plugin uninstall
+  - plugin update
+  - plugin update-all
+
+  # Configuration should be generated with app/config/parameters.yml
+  - core config
+
+  # Since WordPress itself is a dependency, 
+  # there is no need for the folllowing command
+  - core install 
+  - core update
+
+  # Currently there is no support for multisite
+  - core multisite-convert
+  - core multisite-install
+
+  # Dangerous script
+  - db drop
