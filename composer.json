@@ -3,7 +3,8 @@
     "description": "WordPress theme startup that works with Composer",
     "type" : "project",
     "require": {
-        "ixa/wordpress-core": "3.6.1"
+        "ixa/wordpress-core": "~3.6.1",
+        "incenteev/composer-parameter-handler": "~2.0"
     },
     "license": "GPL-2.0+",
     "authors": [
@@ -11,5 +12,18 @@
             "name": "cesarhdz",
             "email": "mrshortcuts@gmail.com"
         }
-    ]
+    ],
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ]
+    },
+     "extra": {
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        }
+    }
 }

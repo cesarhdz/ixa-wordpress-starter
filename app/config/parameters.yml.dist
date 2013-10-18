@@ -1,0 +1,13 @@
+# WordPress Params
+# The followign params can be different accross environments
+parameters:
+
+    # Database Credentials
+    db_name:        wordpress 
+    db_user:        root
+    db_password:    ""
+    db_host:        localhost
+    table_prefix:   wp_
+
+    # Site URL
+    wp_home:        http://localhost:1234
