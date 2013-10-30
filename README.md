@@ -10,7 +10,7 @@ WordPress project starter that works with [Composer] and [WP-CLI]
 
 Using `composer create-project` command the project and dependencies will be dowloaded
 
-	composer create-project ixa/wordpress-starter --stability=dev [project-name]
+	composer create-project ixa/wordpress-starter [project-name]
 	cd project-name
 
 In order to be installed, WordPress needs the `wp-config.php` file, you can copy the `wp-config-sample.php` and make the necessary adjustments.
