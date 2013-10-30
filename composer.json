@@ -20,18 +20,7 @@
             "email": "mrshortcuts@gmail.com"
         }
     ],
-    "scripts": {
-        "post-install-cmd": [
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
-        ],
-        "post-update-cmd": [
-            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
-        ]
-    },
      "extra": {
-        "incenteev-parameters": {
-            "file": "app/config/parameters.yml"
-        },
         "installer-paths": {
             "app/plugins/{$name}/": ["type:wordpress-plugin"]
         }
