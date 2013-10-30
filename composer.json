@@ -9,9 +9,7 @@
         }
     ],
     "require": {
-        "ixa/wordpress-core": "~3.6.1",
-        "incenteev/composer-parameter-handler": "~2.0",
-        "wpackagist/wp-markdown": "*"
+        "ixa/wordpress-core": "~3.7"
     },
     "license": "GPL-2.0+",
     "authors": [
