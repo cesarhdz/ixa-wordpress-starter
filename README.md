@@ -17,7 +17,7 @@ In order to be installed, WordPress needs the `wp-config.php` file, you can copy
 
 	cp wp-config-sample.php wp-config.php
 
-Once `wp-config` file is ready, you can use [WP_CLI] to install WordPress. Asumming you have `wp` globally installed the following command will do the trick.
+Once `wp-config` file is ready, you can use [WP-CLI] to install WordPress. Asumming you have `wp` globally installed the following command will do the trick.
 
 	wp core install --title=site-name --admin_email=user@mail.com --admin_password=qwerty
 
@@ -30,7 +30,7 @@ In development you can use the php build-in server, runing
 
 	php -S localhost:4567
 
-Your new site is now in htpp://localhost:4567
+Your new site is now in <htpp://localhost:4567>
 
 
 
