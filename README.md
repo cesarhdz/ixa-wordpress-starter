@@ -13,11 +13,11 @@ Using `composer create-project` command the project and dependencies will be dow
 	composer create-project ixa/wordpress-starter [project-name]
 	cd project-name
 
-In order to be installed, WordPress needs the `wp-config.php` file, you can copy the `wp-config-sample.php` and make the necessary adjustments.
+In order to get WordPress installed, we need the environment variables which are set using [PHP dotenv]
 
-	cp wp-config-sample.php wp-config.php
+	cp .env.example .env
 
-Once `wp-config` file is ready, you can use [WP-CLI] to install WordPress. Asumming you have `wp` globally installed the following command will do the trick.
+Once `.env` file is ready, you can use [WP-CLI] to install WordPress. Asumming you have `wp` globally installed the following command will do the trick.
 
 	wp core install --title=site-name --admin_email=user@mail.com --admin_password=qwerty
 
@@ -31,6 +31,8 @@ In development you can use the php build-in server, runing
 	php -S localhost:4567
 
 Your new site is now in <htpp://localhost:4567>
+
+[PHP dotenv]: https://github.com/vlucas/phpdotenv
 
 
 
