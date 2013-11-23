@@ -8,8 +8,5 @@ mailoutput
 
 # WordPress App
 
-## Configuration
-app/config/parameters.yml
-
-## Every environment can have its own wp-config
-wp-config.php
+## Dot Env Variables
+.env
