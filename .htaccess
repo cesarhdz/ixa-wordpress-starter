@@ -1,0 +1,5 @@
+# Deny access to Environment Variables
+<Files ".env">
+Order Allow,Deny
+Deny from all
+</Files>
