@@ -1,0 +1,1 @@
+<h1>Ixa WordPress Starter</h1>
