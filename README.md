@@ -28,9 +28,9 @@ If wp-cli prompts a success message the installation is completed. So far Ixa Wo
 
 In development you can use the php build-in server, runing
 
-	php -S localhost:4567
+	php -S localhost:1234
 
-Your new site is now in <htpp://localhost:4567>
+Your new site is now in <htpp://localhost:1234>
 
 [PHP dotenv]: https://github.com/vlucas/phpdotenv
 
