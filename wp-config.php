@@ -21,6 +21,12 @@ require_once 'vendor/autoload.php';
 require_once 'wp-environment.php';
 
 
+/**
+ * Default theme is ixa-starter
+ */
+define('WP_DEFAULT_THEME', 'ixa-starter');
+
+
 /**#@
  * Authentication Unique Keys and Salts.
  *
