@@ -2,8 +2,6 @@
 /**
  * The base configurations of the WordPress.
  *
- * This file has the following configurations
- * 		- MySQL settings, 
  * 		- Table Prefix,
  * 		- Secret Keys, 
  * 		- WordPress Language
@@ -14,32 +12,19 @@
  * wp-config.php} Codex page. {@link http://generatewp.com/wp-config/} and GenerateWp
  * 
  * Besides the regular instalation of WordPress, and in order to be portable, the following configurations are highly recommended:
- * 		- WP_HOME
  *   	- WP_SITE_URL
  *   	- WP_CONTENT_DIR
  *   	- WP_CONTENT_URL
  *   	- Convenient Varaibles
- *
- * More information below.
- *
  */
+require_once 'vendor/autoload.php';
+require_once 'wp-environment.php';
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'wordpress');
 
-/** MySQL database username */
-define('DB_USER', 'root');
-
-/** MySQL database password */
-define('DB_PASSWORD', '');
-
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
-
-/** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8');
-
+/**
+ * Default theme is ixa-starter
+ */
+define('WP_DEFAULT_THEME', 'ixa-starter');
 
 
 /**#@
@@ -68,7 +53,7 @@ define('NONCE_SALT',       'put your unique phrase here');
  * You can have multiple installations in one database if you give each a unique
  * prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix  = 'wp_';
+$table_prefix  = getenv('DB_TABLE_PREFIX') ?: 'wp_';
 
 /**
  * WordPress Localized Language, defaults to English.
@@ -87,20 +72,14 @@ define('WPLANG', '');
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
 
-/**
- * WP_HOME
- * This is where the site is located
- */
-define('WP_HOME', 'http://localhost:1234/');
 
 /**
  * Site URL
  * URL of WordPress instalation
  */
 define('WP_SITEURL',  WP_HOME . 'wordpress/');
-
 
 
 /**
@@ -138,13 +117,6 @@ define( 'AUTOMATIC_UPDATER_DISABLED', 'true' );
  */
 // define( 'WP_MEMORY_LIMIT', '64M' );
 
-
 /* That's all, stop editing! Happy blogging. */
-
-/**
- * Composer autoload Required
- */
-require_once('vendor/autoload.php');
-
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');

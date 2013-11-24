@@ -10,27 +10,43 @@ WordPress project starter that works with [Composer] and [WP-CLI]
 
 Using `composer create-project` command the project and dependencies will be dowloaded
 
-	composer create-project ixa/wordpress-starter [project-name]
-	cd project-name
+	$ composer create-project ixa/wordpress-starter [project-name]
+	$ cd project-name
 
-In order to be installed, WordPress needs the `wp-config.php` file, you can copy the `wp-config-sample.php` and make the necessary adjustments.
+In order to get WordPress installed, we need the environment variables which are set using [PHP dotenv]
 
-	cp wp-config-sample.php wp-config.php
+	$ cp .env.example .env
 
-Once `wp-config` file is ready, you can use [WP-CLI] to install WordPress. Asumming you have `wp` globally installed the following command will do the trick.
+Once `.env` file is ready, you can use [WP-CLI] to install WordPress. Asumming you have `wp` globally installed the following command will do the trick.
 
-	wp core install --title=site-name --admin_email=user@mail.com --admin_password=qwerty
+	$ wp core install --title=site-name --admin_email=user@mail.com --admin_password=qwerty
 
-If wp-cli prompts a success message the installation is completed. So far Ixa WordPress Starter doesn't have a theme, so let's generate one with wp-cli
+If wp-cli prompts a success message the installation is completed. You can use the PHP build in server to see your new site in <htpp://localhost:1234>
 
-	wp scaffold _s theme
-	wp activate theme
+	$ php -S localhost:1234
 
-In development you can use the php build-in server, runing
+[PHP dotenv]: https://github.com/vlucas/phpdotenv
 
-	php -S localhost:4567
+## Default Theme
 
-Your new site is now in <htpp://localhost:4567>
+Ixa WordPress Starter ships with a default theme that contains only the welcome message you see after installation and is set in `wp-config.php` using `WP_DEFAULT_THEME` constant. You can override to register your theme, this way, no database configuration is needed and the app is more portable. 
+
+### WP-CLI Scaffold
+
+Using [WP-CLI] you can create a new theme with the scaffold command
+
+	$ wp scaffold _s theme-name
+
+Then you have a new theme based on [Underscores] ready to start.
+
+[Underscores]: http://underscores.me/
 
 
+### Child Themes
+
+Since we are using Composer, the recommended way to use child themes is to register the parent theme as dependency in `composer.json`, just make sure the project type is `wordpress-theme`, so that Composer Installer knows where to install it.
+
+Note that if you want to register the child theme using `WP_DEFAULT_THEME` constant you must define `TEMPLATEPATH` as [this article] suggests.
+
+[this article]: http://wpmututorials.com/how-to/change-the-default-theme-for-sites-without-a-plugin/
 
