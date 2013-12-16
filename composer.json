@@ -10,7 +10,7 @@
     ],
     "require": {
         "php": ">5.3",
-        "ixa/wordpress-core": "~3.7",
+        "ixa/wordpress-core": "~3.8",
         "vlucas/phpdotenv": "~1.0"
     },
     "license": "GPL-2.0+",
