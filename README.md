@@ -8,24 +8,29 @@ WordPress project starter that works with [Composer] and [WP-CLI]
 
 ## Installation
 
-Using `composer create-project` command the project and dependencies will be dowloaded
+    $ composer create-project ixa/wordpress-starter <project-name> --prefer-dist
+	$ cd <project-name>
 
-	$ composer create-project ixa/wordpress-starter [project-name]
-	$ cd project-name
+This command clones _Ixa WordPress Starter_ and downloads all of its dependencies. It also ask your enviroment variables: database credentials and home_url.
 
-In order to get WordPress installed, we need the environment variables which are set using [PHP dotenv]
+If your database is ready you can install WordPress typing:
 
-	$ cp .env.example .env
+    $ vendor/bin/wp core install --promt
 
-Once `.env` file is ready, you can use [WP-CLI] to install WordPress. Asumming you have `wp` globally installed the following command will do the trick.
-
-	$ wp core install --title=site-name --admin_email=user@mail.com --admin_password=qwerty
-
-If wp-cli prompts a success message the installation is completed. You can use the PHP build in server to see your new site in <htpp://localhost:1234>
+If wp-cli prints a success message the installation is completed. You can use the PHP build in server to see your new site in <htpp://localhost:1234>
 
 	$ php -S localhost:1234
 
-[PHP dotenv]: https://github.com/vlucas/phpdotenv
+
+## Configuration
+
+In _Ixa WordPress Starter_, `wp-config.php` file is not meant to hold configuration all constants are set by [Ixa WP-Config] and are located in `config` folder.
+
+[Ixa WP-Config]: https://github.com/cesarhdz/ixa-wp-config
+
+### `.env.yml` file
+
+This file is dynamically created by Composer in every installation or update and must not be added to version control. The `env.yml.dist` is needed to tell Incenteev/ParameterHandler what variables are required and should not be modified.
 
 ## Default Theme
 
@@ -35,7 +40,7 @@ Ixa WordPress Starter ships with a default theme that contains only the welcome 
 
 Using [WP-CLI] you can create a new theme with the scaffold command
 
-	$ wp scaffold _s theme-name
+	$ vendor/bin/wp scaffold _s <theme-name>
 
 Then you have a new theme based on [Underscores] ready to start.
 

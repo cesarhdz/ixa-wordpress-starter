@@ -11,7 +11,12 @@
     "require": {
         "php": ">5.3",
         "ixa/wordpress-core": "~3.8",
-        "vlucas/phpdotenv": "~1.0"
+
+        "incenteev/composer-parameter-handler": "~2.0",
+        "ixa/wp-config": "~0.2"
+    },
+    "require-dev":{
+        "wp-cli/wp-cli": "~0.14.0"
     },
     "license": "GPL-2.0+",
     "authors": [
@@ -20,7 +25,18 @@
             "email": "mrshortcuts@gmail.com"
         }
     ],
-     "extra": {
+    "scripts": {
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ]
+    },
+    "extra": {
+        "incenteev-parameters": {
+            "file": "config/.env.yml"
+        },
         "installer-paths": {
             "app/plugins/{$name}/": ["type:wordpress-plugin"]
         }

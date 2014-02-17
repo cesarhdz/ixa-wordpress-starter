@@ -17,10 +17,18 @@
  *   	- WP_CONTENT_URL
  *   	- Convenient Varaibles
  */
+use Ixa\WordPress\Configuration\Config;
+
 require_once 'vendor/autoload.php';
-require_once 'wp-environment.php';
 
 
+// Loading Environment Variables
+$config = new Config(dirname(__FILE__) . '/config');
+$config->load();
+
+
+// var_dump(ENVIRONMENT);
+// exit();
 /**
  * Default theme is ixa-starter
  */

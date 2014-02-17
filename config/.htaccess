@@ -1,0 +1,4 @@
+# Config File aren't public
+
+order deny,allow
+deny from all

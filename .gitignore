@@ -8,5 +8,5 @@ mailoutput
 
 # WordPress App
 
-## Dot Env Variables
-.env
+## Config
+.env.yml
