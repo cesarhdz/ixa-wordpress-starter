@@ -28,7 +28,7 @@ In _Ixa WordPress Starter_, `wp-config.php` file is not meant to hold configurat
 
 [Ixa WP-Config]: https://github.com/cesarhdz/ixa-wp-config
 
-### `env.yml` file
+### `.env.yml` file
 
 This file is dynamically created by Composer in every installation or update and must not be added to version control. The `env.yml.dist` is needed to tell Incenteev/ParameterHandler what variables are required and should not be modified.
 

@@ -17,13 +17,13 @@
  *   	- WP_CONTENT_URL
  *   	- Convenient Varaibles
  */
-use Ixa\WordPress\Configuration\Configuration;
+use Ixa\WordPress\Configuration\Config;
 
 require_once 'vendor/autoload.php';
 
 
 // Loading Environment Variables
-$config = new Configuration(dirname(__FILE__) . '/config');
+$config = new Config(dirname(__FILE__) . '/config');
 $config->load();
 
 

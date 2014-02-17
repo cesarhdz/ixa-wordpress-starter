@@ -9,4 +9,4 @@ mailoutput
 # WordPress App
 
 ## Config
-env.yml
+.env.yml

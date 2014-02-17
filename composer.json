@@ -13,7 +13,7 @@
         "ixa/wordpress-core": "~3.8",
 
         "incenteev/composer-parameter-handler": "~2.0",
-        "ixa/wp-config": "*"
+        "ixa/wp-config": "~0.2"
     },
     "require-dev":{
         "wp-cli/wp-cli": "~0.14.0"
@@ -35,7 +35,7 @@
     },
     "extra": {
         "incenteev-parameters": {
-            "file": "config/env.yml"
+            "file": "config/.env.yml"
         },
         "installer-paths": {
             "app/plugins/{$name}/": ["type:wordpress-plugin"]
