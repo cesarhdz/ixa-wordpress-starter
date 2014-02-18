@@ -13,7 +13,7 @@
         "ixa/wordpress-core": "~3.8",
 
         "incenteev/composer-parameter-handler": "~2.0",
-        "ixa/wp-config": "~0.2"
+        "ixa/wp-config": "dev-develop#cded59d"
     },
     "require-dev":{
         "wp-cli/wp-cli": "~0.14.0"
