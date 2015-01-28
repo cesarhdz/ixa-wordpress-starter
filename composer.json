@@ -10,7 +10,7 @@
     ],
     "require": {
         "php": ">5.3",
-        "ixa/wordpress-core": "~3.8",
+        "ixa/wordpress-core": "~4.1",
 
         "incenteev/composer-parameter-handler": "~2.0",
         "ixa/wp-config": "dev-develop#cded59d"
@@ -31,6 +31,15 @@
         ],
         "post-update-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters"
+        ],
+        "wp-install": [
+            "echo \"Installing Wordpress... (press ctrl + c if already installed)\"",
+            "wp core install --prompt"
+        ],
+        "serve": [
+            "echo Serving wordpress at http://localhost:1234/",
+            "echo Press ctrl + c to exit",
+            "php -S localhost:1234"
         ]
     },
     "extra": {

@@ -15,11 +15,11 @@ This command clones _Ixa WordPress Starter_ and downloads all of its dependencie
 
 If your database is ready you can install WordPress typing:
 
-    $ vendor/bin/wp core install --promt
+    $ composer wp-install 
 
 If wp-cli prints a success message the installation is completed. You can use the PHP build in server to see your new site in <htpp://localhost:1234>
 
-	$ php -S localhost:1234
+	$ composer serve
 
 
 ## Configuration
